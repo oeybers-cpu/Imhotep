@@ -14,15 +14,15 @@
         }
 
         :root {
-            --primary: #d4af37; /* Gold */
-            --secondary: #0066b2; /* Egyptian blue */
-            --accent: #8a2be2; /* Royal purple */
-            --dark: #0a0a14;
-            --darker: #050508;
-            --light: #f0f0f0;
-            --card-bg: rgba(20, 20, 30, 0.7);
+            --primary: #00b4d8; /* Aqua blue */
+            --secondary: #0077b6; /* Deep blue */
+            --accent: #48cae4; /* Light turquoise */
+            --dark: #03045e;
+            --darker: #010228;
+            --light: #f0f8ff;
+            --card-bg: rgba(3, 4, 94, 0.7);
             --sidebar-width: 280px;
-            --lighter-accent: #b19cd9;
+            --lighter-accent: #90e0ef;
         }
 
         body {
@@ -45,9 +45,9 @@
             width: 100%;
             height: 100%;
             background: 
-                radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 20%),
-                radial-gradient(circle at 90% 80%, rgba(0, 102, 178, 极.05) 0%, transparent 20%),
-                radial-gradient(circle at 50% 50%, rgba(138, 43, 226, 0.03) 0%, transparent 30%);
+                radial-gradient(circle at 10% 20%, rgba(0, 180, 216, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(0, 119, 182, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 50% 50%, rgba(72, 202, 228, 0.03) 0%, transparent 30%);
             pointer-events: none;
             z-index: -2;
         }
@@ -59,8 +59,8 @@
             width: 100%;
             height: 100%;
             background-image: 
-                linear-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1极),
-                linear-gradient(90deg, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+                linear-gradient(rgba(0, 180, 216, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 180, 216, 极.03) 1px, transparent 1px);
             background-size: 40px 40px;
             pointer-events: none;
             z-index: -1;
@@ -72,8 +72,8 @@
             top: 25px;
             left: 25px;
             z-index: 1000;
-            background: rgba(20, 20, 30, 0.7);
-            border: 1px solid rgba(212, 175, 55, 0.2);
+            background: rgba(3, 4, 94, 0.7);
+            border: 1px solid rgba(0, 180, 216, 0.2);
             color: var(--primary);
             width: 50px;
             height: 50px;
@@ -84,21 +84,21 @@
             cursor: pointer;
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+            box-shadow: 0 0 15px rgba(0, 180, 216, 0.2);
         }
 
         .back-button:hover {
-            background: rgba(212, 175, 55, 0.2);
+            background: rgba(0, 180, 216, 0.2);
             transform: translateX(-5px);
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+            box-shadow: 0 0 20px rgba(0, 180, 216, 0.4);
         }
 
         /* Sidebar styling */
         .sidebar {
             width: var(--sidebar-width);
             padding: 20px;
-            background: var(--card极g);
-            border: 1px solid rgba(212, 175, 55, 0.1);
+            background: var(--card-bg);
+            border: 1px solid rgba(0, 180, 216, 0.1);
             border-radius: 11.25px;
             margin-right: 30px;
             backdrop-filter: blur(10px);
@@ -111,7 +111,7 @@
             width: 100%;
             border-radius: 8px;
             margin-bottom: 20px;
-            border: 1px solid rgba(212, 175, 55, 0.2);
+            border: 1px solid rgba(0, 180, 216, 0.2);
         }
 
         .sidebar-links {
@@ -125,16 +125,20 @@
             text-decoration: none;
             padding: 12px 15px;
             border-radius: 8px;
-            background: rgba(212, 175, 55, 0.05);
-            border: 1px solid rgba(212, 175, 55, 0.1);
+            background: rgba(0, 180, 216, 0.05);
+            border: 1px solid rgba(0, 180, 216, 0.1);
             transition: all 0.3s ease;
             font-size: 0.9rem;
-            text-align: center;
+            text-align: left;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            text-transform: none;
         }
 
         .sidebar-link:hover {
-            background: rgba(212, 175, 55, 0.15);
-            box-shadow: 0 0 15px rgba(212, 极75, 55, 0.5);
+            background: rgba(0, 180, 216, 0.15);
+            box-shadow: 0 0 15px rgba(0, 180, 216, 0.5);
             transform: translateY(-2px);
         }
 
@@ -152,8 +156,8 @@
             text-align: center;
             padding: 30px 0 15px;
             position: relative;
-            background: linear-gradient(to right, rgba(212, 175, 55, 0.1), transparent);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            background: linear-gradient(to right, rgba(0, 180, 216, 0.1), transparent);
+            border-bottom: 1px solid rgba(0, 180, 216, 0.2);
             margin-bottom: 22.5px;
             border-radius: 0 0 15px 15px;
             overflow: hidden;
@@ -168,9 +172,9 @@
             height: 100%;
             background: linear-gradient(90deg, 
                 transparent, 
-                rgba(212, 175, 55, 0.1), 
-                rgba(0, 102, 178, 0.1), 
-                rgba(138, 43, 226, 0.1),
+                rgba(0, 180, 216, 0.1), 
+                rgba(0, 119, 182, 0.1), 
+                rgba(72, 202, 228, 0.1),
                 transparent);
             animation: headerShine 8s infinite linear;
             z-index: -1;
@@ -190,7 +194,7 @@
             color: transparent;
             text-transform: uppercase;
             letter-spacing: 2.25px;
-            text-shadow: 0 0 11.25px rgba(212, 175, 55, 0.5);
+            text-shadow: 0 0 11.25px rgba(0, 180, 216, 0.5);
             font-family: 'Orbitron', sans-serif;
             font-weight: 700;
             position: relative;
@@ -199,8 +203,8 @@
         }
 
         @keyframes pulse {
-            0% { text-shadow: 0 极 11.25px rgba(212, 175, 55, 0.5); }
-            100% { text-shadow: 0 0 20极 rgba(212, 175, 55, 0.8), 0 0 30px rgba(212, 175, 55, 0.6); }
+            0% { text-shadow: 0 0 11.25px rgba(0, 180, 216, 0.5); }
+            100% { text-shadow: 0 0 20px rgba(0, 180, 216, 0.8), 0 0 30px rgba(0, 180, 216, 0.6); }
         }
 
         h1::after {
@@ -224,13 +228,13 @@
 
         .contact-card {
             background: var(--card-bg);
-            border: 1px solid rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(0, 180, 216, 0.1);
             border-radius: 11.25px;
             padding: 15px;
             max-width: 600px;
             margin: 22.5px auto;
             backdrop-filter: blur(10px);
-            box-shadow: 0 0 22.5px rgba(212, 175, 55, 0.1);
+            box-shadow: 0 0 22.5px rgba(0, 180, 216, 0.1);
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
@@ -246,12 +250,12 @@
             background: linear-gradient(90deg, var(--primary), var(--secondary));
             transform: scaleX(0);
             transform-origin: left;
-            transition: transform 0.5极 ease;
+            transition: transform 0.5s ease;
         }
 
         .contact-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 7.5px 30px rgba(212, 175, 55, 0.3);
+            box-shadow: 0 7.5px 30px rgba(0, 180, 216, 0.3);
         }
 
         .contact-card:hover::before {
@@ -276,16 +280,16 @@
             word-break: break-all;
             display: inline-block;
             padding: 3.75px 7.5px;
-            border-radius: 3.75极;
+            border-radius: 3.75px;
         }
 
         .contact-card a:hover {
             color: var(--secondary);
-            text-shadow: 0 0 11.25px rgba(0, 102, 178, 0.7);
+            text-shadow: 0 0 11.25px rgba(0, 119, 182, 0.7);
             background: rgba(255, 255, 255, 0.1);
         }
 
-        /* Articles grid made of equal squares on large screens */
+        /* Articles grid */
         .articles-container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -295,7 +299,7 @@
 
         .article-card {
             background: var(--card-bg);
-            border: 1px solid rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(0, 180, 216, 0.1);
             border-radius: 11.25px;
             padding: 18.75px;
             transition: all 0.4s ease;
@@ -304,8 +308,6 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            aspect-ratio: 1/1; /* square cards */
-            min-height: 320px; /* ensures presence on very wide screens */
         }
 
         .article-card::before {
@@ -324,7 +326,7 @@
         .article-card:hover {
             transform: translateY(-7.5px);
             box-shadow: 0 11.25px 30px rgba(0, 0, 0, 0.4);
-            border-color: rgba(212, 175, 55, 0.4);
+            border-color: rgba(0, 180, 216, 0.4);
         }
 
         .article-card:hover::before {
@@ -340,7 +342,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            text-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+            text-shadow: 0 0 8px rgba(0, 180, 216, 0.6);
         }
 
         .article-card h3 i {
@@ -354,7 +356,6 @@
             margin-bottom: 15px;
             flex-grow: 1;
             text-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
-            overflow-y: auto; /* allow scrolling within square */
         }
 
         .article-content p {
@@ -370,7 +371,7 @@
             margin-bottom: 8px;
         }
 
-        /* Image panel kept consistent with card sizing */
+        /* Image panel */
         .image-panel {
             display: flex;
             flex-direction: column;
@@ -403,17 +404,17 @@
         }
         
         .image-container img:hover {
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.7);
+            box-shadow: 0 0 15px rgba(0, 180, 216, 0.7);
             transform: scale(1.02);
         }
 
         .citation {
-            background: rgba(212, 175, 55, 0.1);
+            background: rgba(0, 180, 216, 0.1);
             color: var(--primary);
             padding: 3.75px 9px;
             border-radius: 15px;
             font-size: 0.7rem;
-            border: 1px solid rgba(212, 175, 55, 0.2);
+            border: 1px solid rgba(0, 180, 216, 0.2);
             display: inline-block;
             margin: 5px 0;
         }
@@ -425,33 +426,33 @@
             margin: 9px 0;
         }
 
-        .meta-t极 {
-            background: rgba(212, 175, 55, 0.1);
+        .meta-tag {
+            background: rgba(0, 180, 216, 0.1);
             color: var(--primary);
             padding: 3.75px 9px;
             border-radius: 15px;
             font-size: 0.6375rem;
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            text-shadow: 0 0 4px rgba(212, 175, 55, 0.3);
+            border: 1px solid rgba(0, 180, 216, 0.2);
+            text-shadow: 0 0 4px rgba(0, 180, 216, 0.3);
         }
 
         .new-tag {
-            background: rgba(138, 43, 226, 0.2);
+            background: rgba(72, 202, 228, 0.2);
             color: var(--accent);
-            border-color: rgba(138, 43, 226, 0.3);
-            text-shadow: 0 0 4px rgba(138, 43, 226, 0.3);
+            border-color: rgba(72, 202, 228, 0.3);
+            text-shadow: 0 0 4px rgba(72, 202, 228, 0.3);
         }
 
         .article-link {
             display: inline-block;
             color: var(--light);
-            background: linear-gradient(90deg, rgba(212, 175, 55, 0.2), rgba(138, 43, 226, 0.2));
+            background: linear-gradient(90deg, rgba(0, 180, 216, 0.2), rgba(72, 202, 228, 0.2));
             padding: 7.5px 15px;
             border-radius: 6px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
-            border: 1px solid rgba(212, 175, 55, 0.3);
+            border: 1px solid rgba(0, 180, 216, 0.3);
             text-align: center;
             width: 100%;
             font-family: 'Orbitron', sans-serif;
@@ -475,12 +476,12 @@
         .article-link:hover {
             background: linear-gradient(90deg, var(--primary), var(--accent));
             color: var(--darker);
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+            box-shadow: 0 0 15px rgba(0, 180, 216, 0.5);
             transform: translateY(-2.25px);
         }
 
         .article-link:hover::before {
-            left: 极00%;
+            left: 100%;
         }
 
         .copyright {
@@ -488,7 +489,7 @@
             padding: 30px 0 15px;
             color: #777;
             font-size: 0.675rem;
-            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            border-top: 1px solid rgba(0, 180, 216, 0.1);
             margin-top: 22.5px;
         }
 
@@ -509,7 +510,7 @@
             }
         }
 
-        @极edia (max-width: 900px) {
+        @media (max-width: 900px) {
             body {
                 flex-direction: column;
             }
@@ -522,13 +523,7 @@
             }
             
             .articles-container {
-                grid-template-columns: 1极;
-            }
-            
-            /* Allow cards to grow naturally for readability on narrow screens */
-            .article-card {
-                aspect-ratio: auto;
-                min-height: 300px;
+                grid-template-columns: 1fr;
             }
             
             h1 {
@@ -579,26 +574,25 @@
         <img src="https://github.com/oeybers-cpu/Imhotep/blob/main/Imhotep1.jpg?raw=true" alt="Imhotep of Ancient Kemet" class="sidebar-image">
         
         <div class="sidebar-links">
-            <a href="https://shorturl.at/Csofy" class="sidebar-link" target="_blank">
-                The Wisdom of Imhotep
-            </a>
-            <a href="https://journals.sagepub.com/doi/abs/10.1177/003591574003301204" class="sidebar-link" target="_blank">
-                Imhotep: Father of Medicine
-            </a>
-            <a href="https://onlinelibrary.wiley.com/doi/pdf/10.1002/9780470997154#page=48" class="sidebar-link" target="_blank">
-                Ancient Kemet Philosophy
-            </a>
-            <a href="https://www.worldhistory.org/Imhotep/" class="sidebar-link" target="_blank">
-                World History Encyclopedia
-            </a>
-            <a href="https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=ef8de8285ac979ce2233be231108f6c14da3d277" class="sidebar-link" target="_blank">
-                Imhotep - Bulletin Anesthesia
-            </a>
-            <a href="https://www.researchgate.net/publication/35278642_Maat_the_moral_ideal_in_ancient_Egypt_a_study_in_classical_African_ethics" class="sidebar-link" target="_blank">
-                Karenga: Ancient Kemetian Wisdom
-            </a>
-        </div>
-    </div>
+            <a href="https://shorturl.at/Csofy" class="sidebar-link" target="_blank">
+                The wisdom of Imhotep
+            </a>
+            <a href="https://journals.sagepub.com/doi/abs/10.1177/003591574003301204" class="sidebar-link" target="_blank">
+                Imhotep: father of medicine
+            </a>
+            <a href="https://onlinelibrary.wiley.com/doi/pdf/10.1002/9780470997154#page=48" class="sidebar-link" target="_blank">
+                Ancient Kemet philosophy
+            </a>
+            <a href="https://www.worldhistory.org/Imhotep/" class="sidebar-link" target="_blank">
+                World History Encyclopedia
+            </a>
+            <a href="https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=ef8de8285ac979ce2233be231108f6c14da3d277" class="sidebar-link" target="_blank">
+                Imhotep - Bulletin Anesthesia
+            </a>
+            <a href="https://www.researchgate.net/publication/35278642_Maat_the_moral_ideal_in_ancient_Egypt_a_study_in_classical_African_ethics" class="sidebar-link" target="_blank">
+                Karenga: Ancient Kemetian wisdom
+            </a>
+        </div>
     </div>
     
     <!-- Main content -->
@@ -634,7 +628,7 @@
                     </div>
                     <div class="article-meta">
                         <span class="meta-tag">History</span>
-                        <span class="meta-tag new-tag">Polymath</极>
+                        <span class="meta-tag new-tag">Polymath</span>
                     </div>
                 </div>
                 
@@ -665,7 +659,7 @@
                 
                 <!-- Medical Contributions -->
                 <div class="article-card">
-                    <h3><i class="fas fa-heartbeat"></i> Medical Pioneering</h3>
+                    <h3><极 class="fas fa-heartbeat"></i> Medical Pioneering</h3>
                     <div class="article-content">
                         <p>Imhotep is recognized as the founder of ancient Egyptian medicine, predating Hippocrates by over two millennia.</p>
                         
@@ -691,10 +685,10 @@
                     <div class="article-content">
                         <p>Imhotep represents Africa's rich intellectual heritage and serves as an inspiration for contemporary educational initiatives.</p>
                         
-                        <p><strong>Relevance for Academic Literacy:</strong></极>
+                        <p><strong>Relevance for Academic Literacy:</strong></p>
                         <ul>
                             <li>Embodies interdisciplinary knowledge integration</li>
-                            <li>Symbolizes African excellence in science and arts</极>
+                            <li>Symbolizes African excellence in science and arts</li>
                             <li>Provides culturally resonant content for African learners</li>
                             <li>Demonstrates the power of literacy in preserving and advancing knowledge</li>
                         </ul>
@@ -718,7 +712,7 @@
                             <li>Imhotep Academy in Atlanta (founded 1993) focuses on African-centered academic excellence</li>
                             <li>Educational materials centered on Imhotep nurture literacy through culturally resonant content</li>
                             <li>Programs emphasize community engagement and culturally driven curricula</li>
-                            <li>Initiatives improve reading proficiency, learning confidence, and parental involvement</li>
+                            <li>Initiatives improve reading proficiency, learning confidence, and parental involvement</极>
                         </ul>
                         
                         <p>These programs use Imhotep's story to affirm African contributions to global knowledge systems.</p>
@@ -753,32 +747,32 @@
                 <div style="overflow-x: auto; margin-top: 15px;">
                     <table style="width: 100%; border-collapse: collapse; color: #ddd; font-size: 0.8rem;">
                         <thead>
-                            <tr style="background: rgba(212, 175, 55, 0.1);">
-                                <th style="padding: 10px; text-align: left; border: 1px solid rgba(212, 175, 55, 0.2);">Domain</th>
-                                <th style="padding: 10px; text-align: left; border: 1px solid rgba(212, 175, 55, 0.2);">Contributions</th>
-                                <th style="padding: 10px; text-align: left; border: 1px solid rgba(212, 175, 55, 0.2);">Modern Relevance</th>
+                            <tr style="background: rgba(0, 180, 216, 0.1);">
+                                <th style="padding: 10px; text-align: left; border: 1px solid rgba(0, 180, 216, 0.2);">Domain</th>
+                                <th style="padding: 10px; text-align: left; border: 1px solid rgba(0, 180, 216, 0.2);">Contributions</th>
+                                <th style="padding: 10px; text-align: left; border: 1px solid rgba(0, 180, 216, 0.2);">Modern Relevance</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td style="padding: 10px; border: 1px solid rgba(212, 175, 55, 0.1);">Architecture</td>
-                                <td style="padding: 10px; border: 1px solid rgba(212, 175, 55, 0.1);">Step Pyramid, stone construction techniques</td>
-                                <td style="padding: 10px; border: 1px solid rgba(212, 175, 55, 0.1);">Inspiration for African innovation in STEM fields</td>
+                                <td style="padding: 10px; border: 1px solid rgba(0, 180, 216, 0.1);">Architecture</td>
+                                <td style="padding: 10px; border: 1px solid rgba(0, 180, 216, 0.1);">Step Pyramid, stone construction techniques</td>
+                                <td style="padding: 10px; border: 1px solid rgba(0, 180, 216, 0.1);">Inspiration for African innovation in STEM fields</td>
                             </tr>
-                            <tr style="background: rgba(212, 175, 55, 0.05);">
-                                <td style="padding: 10px; border: 1px solid rgba(212, 175, 55, 0.1);">Medicine</td>
-                                <td style="padding: 10px; border: 1px solid rgba(212, 175, 55, 0.1);">Surgical techniques, herbal remedies, diagnostics</td>
-                                <td style="padding: 10px; border: 1px solid rgba(212, 175, 55, 0.1);">Foundation for holistic medical approaches</td>
+                            <tr style="background: rgba(0, 180, 216, 0.05);">
+                                <td style="padding: 10px; border: 1px solid rgba(0, 180, 216, 0.1);">Medicine</td>
+                                <td style="padding: 极0px; border: 1px solid rgba(0, 180, 216, 0.1);">Surgical techniques, herbal remedies, diagnostics</td>
+                                <td style="padding: 10px; border: 1px solid rgba(0, 180, 216, 0.1);">Foundation for holistic medical approaches</td>
                             </tr>
                             <tr>
-                                <td style="padding: 10px; border: 1px solid rgba(212, 175, 55, 0.1);">Education</td>
-                                <td style="padding: 10px; border: 1px solid rgba(212, 175, 55, 0.1);">Integration of knowledge across disciplines</td>
-                                <td style="padding: 10px; border: 1px solid rgba(212, 175, 55, 0.1);">Model for interdisciplinary learning approaches</td>
+                                <td style="padding: 10px; border: 1px solid rgba(0, 180, 216, 0.1);">Education</td>
+                                <td style="padding: 10px; border: 1px solid rgba(0, 180, 216, 0.1);">Integration of knowledge across disciplines</td>
+                                <td style="padding: 10px; border: 1px solid rgba(0, 180, 216, 0.1);">Model for interdisciplinary learning approaches</td>
                             </tr>
-                            <tr style极="background: rgba(212, 175, 55, 0.05);">
-                                <td style="padding: 10px; border: 1px solid rgba(212, 175, 55, 0.1);">Culture</td>
-                                <td style="padding: 10px; border: 1px solid rgba(212, 175, 55, 0.1);">Deification as god of medicine and wisdom</td>
-                                <td style="padding: 10px; border: 1px solid rgba(212, 175, 55, 0.1);">Symbol of African intellectual excellence</td>
+                            <tr style="background: rgba(0, 180, 216, 0.05);">
+                                <td style="padding: 10px; border: 1px solid rgba(0, 180, 216, 0.1);">Culture</td>
+                                <td style="padding: 10px; border: 1px solid rgba(0, 180, 216, 0.1);">Deification as god of medicine and wisdom</td>
+                                <td style="padding: 10px; border: 1px solid rgba(0, 180, 216, 0.1);">Symbol of African intellectual excellence</td>
                             </tr>
                         </tbody>
                     </table>
@@ -790,14 +784,14 @@
 
             <div class="copyright">
                 <div class="university-logo">
-                    <svg viewBox="0 0 100 30" fill="#8a2be2">
-                        <path d="M10,15 Q20,5 30,15 T50,15 T70,15 T90,15" stroke="#d4af37" stroke-width="2" fill="none"/>
-                        <circle cx="50" cy="15" r="5" fill="#d4af37"/>
+                    <svg viewBox="0 0 100 30" fill="#48cae4">
+                        <path d="M10,15 Q20,5 30,15 T50,15 T70,15 T90,15" stroke="#00b4d8" stroke-width="2" fill="none"/>
+                        <circle cx="50" cy="15" r="5" fill="#00b4d8"/>
                         <text x="50" y="25" text-anchor="middle" fill="#aaa" font-size="8">IMHOTEP LEGACY PROJECT</text>
                     </svg>
                 </div>
                 <p>© 2024 Imhotep Educational Research Portal</p>
-                <p>Celebrating Africa's Intellectual Heritage</极>
+                <p>Celebrating Africa's Intellectual Heritage</p>
             </div>
         </div>
     </div>
@@ -807,7 +801,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             const cards = document.querySelectorAll('.article-card');
             
-            cards.forEach((card, index极 => {
+            cards.forEach((card, index) => {
                 card.style.opacity = '0';
                 card.style.transform = 'translateY(20px)';
                 
@@ -821,9 +815,9 @@
             // Add pulse animation to contact card
             const contactCard = document.querySelector('.contact-card');
             setInterval(() => {
-                contactCard.style.boxShadow = '0 0 30px rgba(212, 175, 55, 0.3)';
+                contactCard.style.boxShadow = '0 0 30px rgba(0, 180, 216, 0.3)';
                 setTimeout(() => {
-                    contactCard.style.boxShadow = '0 0 20px rgba(212, 175, 55, 0.1)';
+                    contactCard.style.boxShadow = '0 0 20px rgba(0, 180, 216, 0.1)';
                 }, 1000);
             }, 3000);
             
