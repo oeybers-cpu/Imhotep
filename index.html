@@ -67,33 +67,6 @@
             z-index: -1;
         }
 
-        /* Back button styling */
-        .back-button {
-            position: fixed;
-            top: 25px;
-            left: 25px;
-            z-index: 1000;
-            background: rgba(0, 18, 32, 0.7);
-            border: 1px solid rgba(0, 188, 212, 0.2);
-            color: var(--primary);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 0 15px rgba(0, 188, 212, 0.2);
-        }
-
-        .back-button:hover {
-            background: rgba(0, 188, 212, 0.2);
-            transform: translateX(-5px);
-            box-shadow: 0 0 20px rgba(0, 188, 212, 0.4);
-        }
-
         /* Home link styling, fixed to mimic the back button */
         .home-link {
             position: fixed;
@@ -566,6 +539,34 @@
             opacity: 0.7;
         }
 
+        /* New styles for the historical overview card with image */
+        .historical-card-content {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            height: 100%;
+        }
+
+        .historical-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        .historical-image {
+            flex: 0 0 40%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .historical-image img {
+            width: 100%;
+            max-height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
         /* Shrink the image in the Medical Pioneering card */
         .articles-container .article-card:nth-child(3) .image-container {
             max-height: 180px;
@@ -619,6 +620,20 @@
             .articles-container .article-card:nth-child(3) .image-container {
                 max-height: 150px;
             }
+
+            /* Stack the historical card content on mobile */
+            .historical-card-content {
+                flex-direction: column;
+            }
+
+            .historical-image {
+                flex: 0 0 auto;
+                margin-top: 15px;
+            }
+
+            .historical-image img {
+                max-height: 150px;
+            }
         }
 
         @media (max-width: 600px) {
@@ -638,13 +653,6 @@
                 font-size: 1rem;
             }
             
-            .back-button {
-                top: 15px;
-                left: 15px;
-                width: 40px;
-                height: 40px;
-            }
-            
             .home-link {
                 top: 15px;
                 left: 15px;
@@ -654,6 +662,10 @@
 
             /* Further adjust medical card image on very small screens */
             .articles-container .article-card:nth-child(3) .image-container {
+                max-height: 120px;
+            }
+
+            .historical-image img {
                 max-height: 120px;
             }
         }
@@ -704,23 +716,30 @@
             <div class="articles-container">
                 <div class="article-card">
                     <h3><i class="fas fa-monument"></i> Historical Overview</h3>
-                    <div class="article-content">
-                        <p>Imhotep lived over 4,000 years ago during Egypt's Old Kingdom (circa 27th-26th century BCE). He served as chancellor to Pharaoh Djoser and high priest of the sun god Ra at Heliopolis.</p>
-                        
-                        <p><strong>Key Roles:</strong></p>
-                        <ul>
-                            <li>Chief minister and advisor to Pharaoh Djoser</li>
-                            <li>Architect of the Step Pyramid at Saqqara</li>
-                            <li>Physician and founder of Egyptian medicine</li>
-                            <li>Astronomer and sage</li>
-                            <li>Later deified as god of medicine and wisdom</li>
-                        </ul>
-                        
-                        <p>Imhotep's name means "He who comes in peace," reflecting his reputation as a bringer of knowledge and harmony.</p>
-                    </div>
-                    <div class="article-meta">
-                        <span class="meta-tag">History</span>
-                        <span class="meta-tag new-tag">Polymath</span>
+                    <div class="historical-card-content">
+                        <div class="historical-text">
+                            <div class="article-content">
+                                <p>Imhotep lived over 4,000 years ago during Egypt's Old Kingdom (circa 27th-26th century BCE). He served as chancellor to Pharaoh Djoser and high priest of the sun god Ra at Heliopolis.</p>
+                                
+                                <p><strong>Key Roles:</strong></p>
+                                <ul>
+                                    <li>Chief minister and advisor to Pharaoh Djoser</li>
+                                    <li>Architect of the Step Pyramid at Saqqara</li>
+                                    <li>Physician and founder of Egyptian medicine</li>
+                                    <li>Astronomer and sage</li>
+                                    <li>Later deified as god of medicine and wisdom</li>
+                                </ul>
+                                
+                                <p>Imhotep's name means "He who comes in peace," reflecting his reputation as a bringer of knowledge and harmony.</p>
+                            </div>
+                            <div class="article-meta">
+                                <span class="meta-tag">History</span>
+                                <span class="meta-tag new-tag">Polymath</span>
+                            </div>
+                        </div>
+                        <div class="historical-image">
+                            <img src="https://humanoriginproject.com/wp-content/uploads/2019/05/When-were-the-egyptian-pyramids-built.jpg" alt="Egyptian Pyramids">
+                        </div>
                     </div>
                 </div>
                 
