@@ -566,6 +566,19 @@
             opacity: 0.7;
         }
 
+        /* Shrink the image in the Medical Pioneering card */
+        .articles-container .article-card:nth-child(3) .image-container {
+            max-height: 180px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+
+        .articles-container .article-card:nth-child(3) .image-container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
         @media (max-width: 1100px) {
             .articles-container {
                 grid-template-columns: 1fr 1fr;
@@ -601,6 +614,11 @@
             .subtitle {
                 font-size: 0.75rem;
             }
+
+            /* Adjust medical card image on mobile */
+            .articles-container .article-card:nth-child(3) .image-container {
+                max-height: 150px;
+            }
         }
 
         @media (max-width: 600px) {
@@ -632,6 +650,11 @@
                 left: 15px;
                 padding: 8px 16px;
                 font-size: 0.8rem;
+            }
+
+            /* Further adjust medical card image on very small screens */
+            .articles-container .article-card:nth-child(3) .image-container {
+                max-height: 120px;
             }
         }
     </style>
@@ -725,8 +748,11 @@
                     </div>
                 </div>
                 
-                <div class="article-card">
+                <div class="article-card image-panel">
                     <h3><i class="fas fa-heartbeat"></i> Medical Pioneering</h3>
+                    <div class="image-container">
+                        <img src="https://www.egypttoursportal.com/images/2019/08/Ancient-Egyptian-Medicine-Egypt-Tours-Portal.jpg" alt="Ancient Egyptian Medicine">
+                    </div>
                     <div class="article-content">
                         <p>Imhotep is recognized as the founder of ancient Egyptian medicine, predating Hippocrates by over two millennia.</p>
                         
@@ -734,9 +760,6 @@
                         <ul>
                             <li>Developed surgical techniques and procedures</li>
                             <li>Created an extensive pharmacopoeia of herbal remedies</li>
-                             <div class="image-container">
-                        <img src="https://www.egypttoursportal.com/images/2019/08/Ancient-Egyptian-Medicine-Egypt-Tours-Portal.jpg" alt="Educational Significance of Imhotep">
-                    </div>
                             <li>Advanced anatomical understanding through observation</li>
                             <li>Established diagnostic methods that considered both physical and spiritual aspects of health</li>
                         </ul>
